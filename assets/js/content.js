@@ -9,7 +9,7 @@ window.PORTFOLIO = {
   /* asset paths — change here, not in markup */
   assets: {
     portrait: 'assets/images/portrait.png',
-    resume: 'assets/files/Titash_Sinha_Resume_Master.pdf',
+    resume: 'assets/files/Titash_Sinha_AI_Content_Strategist_Resume.pdf',
     sheet: 'https://docs.google.com/spreadsheets/d/1XShVbjFH53N-KIyUOIot3x3_7_Daw5x_9LvM_J0KsUo/edit?gid=361504315#gid=361504315',
   },
 
