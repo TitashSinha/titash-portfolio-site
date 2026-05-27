@@ -1,0 +1,161 @@
+<!doctype html>
+<!-- Original Work by Titash Sinha — AI Content Strategist. Please retain attribution. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FutureGenerali · Lifecycle Copy & AI Chatbot — Titash Sinha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Anton&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <div class="glow-layer"></div>
+  <div class="grain"></div>
+  <div class="vignette"></div>
+
+  <main class="page">
+    <div class="shell">
+
+      <div class="top-bar">
+        <a class="back-link" href="../Portfolio.html#experience">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5"/><path d="m12 19-7-7 7-7"/>
+          </svg>
+          Back to portfolio
+        </a>
+      </div>
+
+      <div class="project-hero"><svg viewBox="0 0 1400 600" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <radialGradient id="fgbg" cx="70%" cy="35%" r="80%">
+            <stop offset="0%" stop-color="#7a8cff" stop-opacity=".55"/>
+            <stop offset="45%" stop-color="#3a4cc4" stop-opacity=".35"/>
+            <stop offset="100%" stop-color="#101830" stop-opacity="1"/>
+          </radialGradient>
+        </defs>
+        <rect width="1400" height="600" fill="#101830"/>
+        <rect width="1400" height="600" fill="url(#fgbg)"/>
+        <!-- decision tree -->
+        <g transform="translate(180,80)" font-family="Geist, sans-serif" font-size="12" fill="#f5ece0">
+          <rect x="0" y="0" width="280" height="56" rx="14" fill="rgba(122,140,255,.18)" stroke="rgba(122,140,255,.4)"/>
+          <text x="140" y="34" text-anchor="middle" font-weight="600">User: "I want to renew my plan"</text>
+
+          <line x1="140" y1="56" x2="45"  y2="110" stroke="rgba(122,140,255,.5)"/>
+          <line x1="140" y1="56" x2="235" y2="110" stroke="rgba(122,140,255,.5)"/>
+
+          <rect x="-45" y="110" width="180" height="44" rx="12" fill="rgba(255,255,255,.04)" stroke="rgba(122,140,255,.3)"/>
+          <text x="45" y="138" text-anchor="middle">Existing policyholder</text>
+
+          <rect x="145" y="110" width="180" height="44" rx="12" fill="rgba(255,255,255,.04)" stroke="rgba(122,140,255,.3)"/>
+          <text x="235" y="138" text-anchor="middle">New customer</text>
+
+          <line x1="45"  y1="154" x2="45"  y2="200" stroke="rgba(122,140,255,.5)"/>
+          <line x1="235" y1="154" x2="235" y2="200" stroke="rgba(122,140,255,.5)"/>
+
+          <rect x="-45" y="200" width="180" height="44" rx="12" fill="rgba(122,140,255,.18)" stroke="rgba(122,140,255,.4)"/>
+          <text x="45" y="228" text-anchor="middle" font-weight="600">Fetch policy · confirm</text>
+
+          <rect x="145" y="200" width="180" height="44" rx="12" fill="rgba(122,140,255,.18)" stroke="rgba(122,140,255,.4)"/>
+          <text x="235" y="228" text-anchor="middle" font-weight="600">Send plan comparison</text>
+
+          <line x1="45"  y1="244" x2="45"  y2="290" stroke="rgba(122,140,255,.5)"/>
+          <line x1="235" y1="244" x2="235" y2="290" stroke="rgba(122,140,255,.5)"/>
+
+          <rect x="-45" y="290" width="180" height="44" rx="12" fill="rgba(255,255,255,.04)" stroke="rgba(122,140,255,.25)"/>
+          <text x="45" y="318" text-anchor="middle" fill="rgba(245,236,224,.7)">Handoff · agent</text>
+
+          <rect x="145" y="290" width="180" height="44" rx="12" fill="rgba(255,255,255,.04)" stroke="rgba(122,140,255,.25)"/>
+          <text x="235" y="318" text-anchor="middle" fill="rgba(245,236,224,.7)">Fallback · email lead</text>
+        </g>
+        <!-- chat preview -->
+        <g transform="translate(780,80)">
+          <rect width="380" height="380" rx="20" fill="#0a1024" stroke="rgba(122,140,255,.35)" stroke-width="1.4"/>
+          <rect x="0" y="0" width="380" height="48" rx="20" fill="rgba(255,255,255,.04)"/>
+          <text x="24" y="30" font-family="Geist" font-size="13" fill="#7a8cff" font-weight="600">Generali Assist</text>
+          <g font-family="Geist" font-size="12" fill="#f5ece0">
+            <rect x="20" y="70"  width="240" height="40" rx="14" fill="rgba(255,255,255,.05)"/>
+            <text x="32" y="94">Hi! How can I help today?</text>
+            <rect x="120" y="124" width="240" height="40" rx="14" fill="rgba(122,140,255,.22)"/>
+            <text x="132" y="148" fill="#f5ece0">I want to renew my plan.</text>
+            <rect x="20" y="178" width="280" height="60" rx="14" fill="rgba(255,255,255,.05)"/>
+            <text x="32" y="200">Sure. Could you share your policy number,</text>
+            <text x="32" y="218">or sign in with your registered mobile?</text>
+            <rect x="20" y="252" width="200" height="36" rx="10" fill="#7a8cff" opacity=".9"/>
+            <text x="120" y="276" text-anchor="middle" fill="#0a1024" font-weight="600">Sign in with OTP</text>
+            <rect x="232" y="252" width="120" height="36" rx="10" fill="transparent" stroke="rgba(245,236,224,.3)"/>
+            <text x="292" y="276" text-anchor="middle" fill="#f5ece0">Type policy #</text>
+
+            <!-- typing input -->
+            <rect x="20" y="318" width="340" height="44" rx="22" fill="rgba(255,255,255,.04)" stroke="rgba(122,140,255,.22)"/>
+            <text x="38" y="345" fill="rgba(245,236,224,.42)">Type a message…</text>
+            <circle cx="334" cy="340" r="15" fill="#7a8cff"/>
+            <path d="M337 340 l-8 -5 v10 z" fill="#0a1024"/>
+          </g>
+        </g>
+      </svg></div>
+
+      <div class="eyebrow">LexiConn · Insurance</div>
+      <h1 class="project-title">FutureGenerali<br/>Lifecycle Copy & AI Chatbot</h1>
+      <p class="descriptor">Website copy and AI chatbot conversational flows — designed in Figma, structured around pre-determined decision trees for a regulated insurance context.</p>
+
+      <div class="meta">
+        <div class="item"><span class="lbl">Client</span><span class="val">FutureGenerali India</span></div>
+        <div class="item"><span class="lbl">Surfaces</span><span class="val">Web copy · Chatbot flows</span></div>
+        <div class="item"><span class="lbl">Status</span><span class="val">Live</span></div>
+      </div>
+
+      <section class="body-section">
+        <h2>Scope</h2>
+        <p>Full homepage MVP copy and product page copy (New Assured Wealth Plan) for the FutureGenerali website. Alongside this, UX microcopy and pre-determined conversational flow design for the AI chatbot — covering entry points, decision branches, fallback states, and handoff triggers.</p>
+      </section>
+
+      <section class="body-section">
+        <h2>Approach</h2>
+        <p>Website copy was written to maintain brand voice and user journey coherence across a regulated financial services context, working directly within Figma wireframes from brief to developer handoff. The chatbot work required structuring conversation flows as decision logic, not prose — mapping user intent to response branches before any copy was written.</p>
+      </section>
+
+      <section class="body-section">
+        <h2>Deliverable</h2>
+        <p>Production website copy (live); Figma-based chatbot flow documentation delivered to the development team.</p>
+      </section>
+
+      <section class="body-section">
+        <h2>Live work</h2>
+        <a class="ext-link" href="https://docs.google.com/spreadsheets/d/1XShVbjFH53N-KIyUOIot3x3_7_Daw5x_9LvM_J0KsUo/edit?gid=361504315#gid=361504315" target="_blank" rel="noopener">
+          <span class="glyph">☷</span>
+          View archive in portfolio
+          <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+        </a>
+        <p class="live-note">Note · FutureGenerali has since rebranded to Generali Central and rebuilt its website. The current live pages no longer reflect the original copy.</p>
+      </section>
+
+      <div class="next">
+        <div class="next-row">
+          <a class="next-link prev" href="marezi.html">
+            <div class="eyebrow">Previous</div>
+            <div class="label">
+              <svg class="next-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+              Marezi · AI-driven web copywriting
+            </div>
+          </a>
+          <a class="next-link up" href="signifikant.html">
+            <div class="eyebrow">Up next</div>
+            <div class="label">
+              Signifikant · Social media
+              <svg class="next-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+            </div>
+          </a>
+        </div>
+        <a class="back-cta" href="../Portfolio.html#experience">
+          <span class="arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
+          <span>Back to portfolio</span>
+        </a>
+      </div>
+
+    </div>
+    <div class="footer">© 2026 Titash Sinha. All rights reserved.</div>
+  </main>
+</body>
+</html>

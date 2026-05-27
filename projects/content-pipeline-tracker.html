@@ -1,0 +1,184 @@
+<!doctype html>
+<!-- Original Work by Titash Sinha — AI Content Strategist. Please retain attribution. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Content Pipeline Tracker — Titash Sinha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Anton&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <div class="glow-layer"></div>
+  <div class="grain"></div>
+  <div class="vignette"></div>
+
+  <main class="page">
+    <div class="shell">
+
+      <div class="top-bar">
+        <a class="back-link" href="../Portfolio.html#experience">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5"/><path d="m12 19-7-7 7-7"/>
+          </svg>
+          Back to portfolio
+        </a>
+        <span class="badge">Flagship build</span>
+      </div>
+
+      <div class="project-hero">
+        <svg viewBox="0 0 1400 600" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="pipebg" cx="65%" cy="35%" r="80%">
+              <stop offset="0%" stop-color="#c9b3ff" stop-opacity=".6"/>
+              <stop offset="40%" stop-color="#6f5ad6" stop-opacity=".4"/>
+              <stop offset="100%" stop-color="#181a1f" stop-opacity="1"/>
+            </radialGradient>
+          </defs>
+          <rect width="1400" height="600" fill="#181a1f"/>
+          <rect width="1400" height="600" fill="url(#pipebg)"/>
+          <g transform="translate(180,80)">
+            <rect width="1040" height="440" rx="20" fill="#15110f" stroke="rgba(201,179,255,.4)" stroke-width="1.5"/>
+            <rect x="0" y="0" width="1040" height="48" rx="20" fill="rgba(255,255,255,.04)"/>
+            <rect x="0" y="20" width="1040" height="28" fill="rgba(255,255,255,.04)"/>
+            <circle cx="22" cy="24" r="6" fill="#ff5f56"/>
+            <circle cx="44" cy="24" r="6" fill="#ffbd2e"/>
+            <circle cx="66" cy="24" r="6" fill="#27c93f"/>
+            <text x="520" y="29" text-anchor="middle" font-family="Geist Mono, monospace" font-size="12" fill="rgba(245,236,224,.55)">pipeline.tracker / admin</text>
+            <!-- header strip -->
+            <g transform="translate(48, 104)">
+              <text font-family="Anton" font-size="26" fill="#c9b3ff">DELIVERY DASHBOARD</text>
+              <text y="22" font-family="Geist" font-size="12" fill="rgba(245,236,224,.55)">Active: 14 · Overdue: 2 · This month: 38</text>
+            </g>
+            <!-- kanban columns -->
+            <g transform="translate(48, 168)">
+              <!-- column 1 -->
+              <rect x="0" y="0" width="225" height="260" rx="12" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.08)"/>
+              <text x="16" y="22" font-family="Geist Mono" font-size="10" letter-spacing="2" fill="#c9b3ff">BRIEF PENDING</text>
+              <g font-family="Geist" font-size="11" fill="#f5ece0">
+                <rect x="12" y="36" width="200" height="56" rx="8" fill="rgba(201,179,255,.10)" stroke="rgba(201,179,255,.25)"/>
+                <text x="22" y="55" font-weight="600">Worldline Outlook</text>
+                <text x="22" y="72" fill="rgba(245,236,224,.55)" font-size="10">Due Apr 18 · Anwesha</text>
+                <rect x="12" y="100" width="200" height="56" rx="8" fill="rgba(201,179,255,.10)" stroke="rgba(201,179,255,.25)"/>
+                <text x="22" y="119" font-weight="600">Marezi · About</text>
+                <text x="22" y="136" fill="rgba(245,236,224,.55)" font-size="10">Due Apr 22 · Titash</text>
+              </g>
+
+              <!-- column 2 -->
+              <rect x="245" y="0" width="225" height="260" rx="12" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.08)"/>
+              <text x="261" y="22" font-family="Geist Mono" font-size="10" letter-spacing="2" fill="#c9b3ff">WRITING</text>
+              <g font-family="Geist" font-size="11" fill="#f5ece0">
+                <rect x="257" y="36" width="200" height="72" rx="8" fill="rgba(201,179,255,.12)" stroke="rgba(201,179,255,.3)"/>
+                <text x="267" y="55" font-weight="600">FutureGenerali · Plan</text>
+                <text x="267" y="72" fill="rgba(245,236,224,.55)" font-size="10">Due Apr 20 · Aanchal</text>
+                <text x="267" y="92" fill="#c9b3ff" font-size="9" letter-spacing="1">● 72% COMPLETE</text>
+                <rect x="257" y="116" width="200" height="56" rx="8" fill="rgba(201,179,255,.10)" stroke="rgba(201,179,255,.25)"/>
+                <text x="267" y="135" font-weight="600">Signifikant · LI #14</text>
+                <text x="267" y="152" fill="rgba(245,236,224,.55)" font-size="10">Due Apr 19 · Titash</text>
+              </g>
+
+              <!-- column 3 -->
+              <rect x="490" y="0" width="225" height="260" rx="12" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.08)"/>
+              <text x="506" y="22" font-family="Geist Mono" font-size="10" letter-spacing="2" fill="#c9b3ff">REVIEW</text>
+              <g font-family="Geist" font-size="11" fill="#f5ece0">
+                <rect x="502" y="36" width="200" height="56" rx="8" fill="rgba(201,179,255,.10)" stroke="rgba(201,179,255,.25)"/>
+                <text x="512" y="55" font-weight="600">HDFC · Lifecycle 2</text>
+                <text x="512" y="72" fill="rgba(245,236,224,.55)" font-size="10">In review · Titash</text>
+                <rect x="502" y="100" width="200" height="56" rx="8" fill="rgba(201,179,255,.10)" stroke="rgba(201,179,255,.25)"/>
+                <text x="512" y="119" font-weight="600">Micron · Whitepaper</text>
+                <text x="512" y="136" fill="rgba(245,236,224,.55)" font-size="10">In review · Anwesha</text>
+              </g>
+
+              <!-- column 4 -->
+              <rect x="735" y="0" width="240" height="260" rx="12" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.08)"/>
+              <text x="751" y="22" font-family="Geist Mono" font-size="10" letter-spacing="2" fill="#c9b3ff">COMPLETED</text>
+              <g font-family="Geist" font-size="11" fill="#f5ece0">
+                <rect x="747" y="36" width="215" height="56" rx="8" fill="rgba(78,222,128,.10)" stroke="rgba(78,222,128,.25)"/>
+                <text x="757" y="55" font-weight="600">Hexaware · Report</text>
+                <text x="757" y="72" fill="rgba(245,236,224,.55)" font-size="10">Submitted Apr 14</text>
+                <rect x="747" y="100" width="215" height="56" rx="8" fill="rgba(78,222,128,.10)" stroke="rgba(78,222,128,.25)"/>
+                <text x="757" y="119" font-weight="600">SAP · Brand voice</text>
+                <text x="757" y="136" fill="rgba(245,236,224,.55)" font-size="10">Submitted Apr 12</text>
+                <rect x="747" y="164" width="215" height="56" rx="8" fill="rgba(78,222,128,.10)" stroke="rgba(78,222,128,.25)"/>
+                <text x="757" y="183" font-weight="600">Klenty · Outbound</text>
+                <text x="757" y="200" fill="rgba(245,236,224,.55)" font-size="10">Submitted Apr 10</text>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div class="eyebrow">LexiConn · Operations</div>
+      <h1 class="project-title">Content Pipeline<br/>Tracker</h1>
+      <p class="descriptor">A content operations dashboard with role-based workflows, project tracking, and administrative oversight — built to replace spreadsheet-based delivery management.</p>
+
+      <div class="meta">
+        <div class="item">
+          <span class="lbl">Role</span>
+          <span class="val">Builder, system designer</span>
+        </div>
+        <div class="item">
+          <span class="lbl">Access</span>
+          <span class="val">Admin + Writer levels</span>
+        </div>
+        <div class="item">
+          <span class="lbl">Status</span>
+          <span class="val">Production · live</span>
+        </div>
+      </div>
+
+      <section class="body-section">
+        <h2>What it is</h2>
+        <p>A full-stack content operations dashboard built to replace the spreadsheet systems most content teams rely on for delivery management. Role-based access, project tracking, status reporting, and administrative oversight — in a single interface.</p>
+      </section>
+
+      <section class="body-section">
+        <h2>The problem it solved</h2>
+        <p>Content delivery at agency scale runs across multiple writers, multiple clients, and multiple brief cycles simultaneously. Visibility collapses without a system. This tool was built to give team leads and contributors a shared operational layer — without the overhead of a full project management platform.</p>
+      </section>
+
+      <section class="body-section">
+        <h2>How it works</h2>
+        <p>Two access levels: Admin and Writer. Admins create article tasks, assign writers, set deadlines, and track delivery against a dashboard showing active projects, overdue tasks, per-writer workload, and monthly completions. Writers log in to view assigned work, update status, add notes, and submit final Google Doc links.</p>
+        <p>Articles move through a defined status flow — Brief Pending, Writing, Review, Revision, Completed — with a status log maintained at the database level. Search and filter capability is built in across all article views.</p>
+      </section>
+
+      <section class="body-section">
+        <h2>Repository</h2>
+        <a class="ext-link" href="https://github.com/TitashSinha/content-pipeline-tracker" target="_blank" rel="noopener">
+          <span class="glyph" style="background:#1f1f1f;"><img src="../assets/logos/github.svg" alt="GitHub" style="width:18px;height:18px;display:block;"></span>
+          github.com/TitashSinha/content-pipeline-tracker
+          <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+        </a>
+      </section>
+
+      <div class="next">
+        <div class="next-row">
+          <a class="next-link prev" href="ai-qc-tool.html">
+            <div class="eyebrow">Previous</div>
+            <div class="label">
+              <svg class="next-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+              AI-Powered Content QC Tool
+            </div>
+          </a>
+          <a class="next-link up" href="marezi.html">
+            <div class="eyebrow">Up next</div>
+            <div class="label">
+              Marezi · AI-driven web copywriting
+              <svg class="next-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+            </div>
+          </a>
+        </div>
+        <a class="back-cta" href="../Portfolio.html#experience">
+          <span class="arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
+          <span>Back to portfolio</span>
+        </a>
+      </div>
+
+    </div>
+    <div class="footer">© 2026 Titash Sinha. All rights reserved.</div>
+  </main>
+</body>
+</html>
