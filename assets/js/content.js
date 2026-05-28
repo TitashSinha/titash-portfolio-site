@@ -70,7 +70,7 @@ window.PORTFOLIO = {
         },
         {
           name: 'FutureGenerali · Website Lifecycle Copy & AI Chatbot Enablement',
-          desc: 'Website copy and AI chatbot conversational flows — designed in Figma, structured around pre-determined decision trees for a regulated insurance context.',
+          desc: 'Website content managed in Strapi CMS, alongside AI chatbot conversational flows designed in Figma — structured around pre-determined decision trees for a regulated insurance context.',
           visual: 'generali',
           href: 'projects/futuregenerali.html',
         },
