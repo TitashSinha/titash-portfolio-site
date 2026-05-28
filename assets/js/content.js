@@ -42,6 +42,7 @@ window.PORTFOLIO = {
       id: 'lexiconn',
       title: 'AI Content Strategist',
       company: 'LexiConn Content Services Pvt Ltd',
+      location: 'Remote',
       subRole: 'Acting Team Lead · Feb 2025 – Aug 2025',
       date: 'Mar 2022 — Present',
       scope: "AI-first from brief to handoff. Content strategy, editorial systems, and LLM-based tooling built for enterprise B2B clients across fintech, BFSI, IT services, and SaaS. Day-to-day work spans UX copy, industry reports, and landing pages — anchored by AI workflows which compound quality across every account touched, and a QC system which now runs as live infrastructure for the team.",
