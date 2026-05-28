@@ -216,7 +216,7 @@
           '<p class="hero-role">' + esc(P.role) + '</p>' +
           '<div class="hero-name-row">' +
             '<h1 class="hero-name">' + esc(P.name.first) + '<br>' + esc(P.name.last) + '<span class="a">.</span></h1>' +
-            '<img class="hero-avatar" src="' + esc(P.assets.portrait) + '" alt="' + esc(P.name.first + ' ' + P.name.last) + '">' +
+            '<img class="hero-avatar" src="assets/images/potrait-mobilescreen.png" alt="' + esc(P.name.first + ' ' + P.name.last) + '">' +
           '</div>' +
         '</div></div>' +
         '<div class="reveal reveal-d1"><div class="contact-grid">' +
