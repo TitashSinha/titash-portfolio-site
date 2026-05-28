@@ -715,11 +715,12 @@ section.links{
 
   /* circular portrait sits beside the name, vertically centred on the two name lines.
      Width tracks the space left of the name (≈165px) so it never overlaps or overflows. */
-  .hero-name-row{ display:flex; align-items:center; gap:16px; margin-bottom:56px; }
+  .hero-name-row{ display:flex; align-items:center; gap:30px; margin-bottom:56px; }
   .hero-name-row .hero-name{ margin-bottom:0; }
   .hero-avatar{
     display:block;
     flex-shrink:0;
+    transform:translateY(-2px);
     width:clamp(64px, calc(100vw - 248px), 126px);
     height:clamp(64px, calc(100vw - 248px), 126px);
     border-radius:50%;
