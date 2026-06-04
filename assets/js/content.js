@@ -171,7 +171,7 @@ window.PORTFOLIO = {
   ],
 
   education: [
-    { name: 'B.Sc Computer Science',               detail: "St. Xavier's College, Ranchi — 2016" },
+    { name: 'B.Sc — Mathematics',                   detail: 'Mahamaya Technical University (MTUN), Noida, India — 2019' },
     { name: 'Professional Copywriting Certificate', detail: 'Alan Sharpe, Udemy — 2025' },
     { name: 'Introduction to Generative AI',        detail: 'Google Cloud Skills Boost' },
   ],
