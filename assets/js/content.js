@@ -9,7 +9,7 @@ window.PORTFOLIO = {
   /* asset paths — change here, not in markup */
   assets: {
     portrait: 'assets/images/portrait.png',
-    resume: 'assets/files/Titash_Sinha_AI_Content_Strategist_Resume.pdf',
+    resume: 'assets/files/Titash_Sinha_ContentOps_Master.pdf',
     sheet: 'https://docs.google.com/spreadsheets/d/1XShVbjFH53N-KIyUOIot3x3_7_Daw5x_9LvM_J0KsUo/edit?gid=361504315#gid=361504315',
   },
 
@@ -27,15 +27,21 @@ window.PORTFOLIO = {
   tagline: 'I think in systems before sentences.',
 
   summary: [
-    "I build AI content systems: prompt workflows, content QC pipelines, and tooling for fintech, BFSI, enterprise IT, and B2B SaaS. Six years of writing inside regulated industries shaped how those systems should work. The engineering makes them run at scale. This portfolio itself was built end-to-end with AI tools, without a traditional development workflow.",
-    "Last year I shipped a QC tool that is now used daily by nineteen people on my team. It reduced revision rounds by forty to fifty percent by combining a configurable rules engine with editorial judgment built over years of hands-on work.",
-    "The work now extends into GEO: structuring content to surface inside AI-generated answers, not simply rank in search. Style guides that scale. Content models that stay consistent. Voice frameworks that survive handoffs.",
+    "I bridge the gap between complex product value and scalable content execution. With six years of experience in high-regulation sectors—fintech, BFSI, and enterprise SaaS—I don't just write; I engineer the systems that govern, produce, and distribute high-impact content.",
+    "My work is AI-native by design. I build end-to-end workflows—from automated prompt engineering and QC pipelines to GEO (Generative Engine Optimization) strategies eliminating bottlenecks and ensure brand consistency at scale.",
     "The tooling took the repetition. The judgement stays mine.",
   ],
 
   quote: {
     text: 'Good content strategy is invisible. What you notice is that the product suddenly makes sense — and stays that way after you leave.',
   },
+
+  competencies: [
+    { title: 'Systems Engineering', desc: 'Built proprietary QC tools that reduced content revision cycles by 40–50% (now a commercialized product, Auditor Pro).' },
+    { title: 'Product Marketing & GTM', desc: 'Led the end-to-end content and distribution infrastructure for seed-stage AI products (Card2Connect), including sales enablement, objection handling, and buyer-segmented journeys.' },
+    { title: 'Content Operations', desc: 'Governance, CMS management, and workflow automation that transforms fragmented editorial efforts into a unified, high-output machine.' },
+    { title: 'GEO & AI Strategy', desc: 'Architecting content models specifically for AI-generated answer engines to ensure brand visibility where traditional search metrics fall short.' },
+  ],
 
   roles: [
     {
@@ -45,19 +51,24 @@ window.PORTFOLIO = {
       location: 'Remote',
       subRole: 'Acting Team Lead · Feb 2025 – Aug 2025',
       date: 'Mar 2022 — Present',
-      scope: "AI-first from brief to handoff. Content strategy, editorial systems, and LLM-based tooling built for enterprise B2B clients across fintech, BFSI, IT services, and SaaS. Day-to-day work spans UX copy, industry reports, and landing pages — anchored by AI workflows which compound quality across every account touched, and a QC system which now runs as live infrastructure for the team.",
+      scope: "AI-first from brief to handoff. Content strategy, editorial systems, and LLM-based tooling built for enterprise B2B clients across fintech, BFSI, IT services, and SaaS. In 2026, LexiConn launched an AI automation suite and the role shifted into product marketing — building content and distribution infrastructure for a four-product suite at seed stage, from zero. Day-to-day work spans UX copy, industry reports, product marketing, and landing pages — anchored by AI workflows which compound quality across every account touched.",
       projects: [
         {
           name: 'AI-Powered Content QC Tool',
-          desc: 'A live editorial QC system — adopted by 19 team members — that catches voice, factual, and structural issues before client review.',
           badge: 'Flagship build',
           featured: true,
           visual: 'qc',
           href: 'projects/ai-qc-tool.html',
         },
         {
+          name: 'Card2Connect · Seed-Stage Product Marketing',
+          badge: 'Product Launch',
+          featured: true,
+          visual: 'card2connect',
+          href: 'projects/card2connect.html',
+        },
+        {
           name: 'Content Pipeline Tracker',
-          desc: 'A content operations dashboard with role-based workflows, project tracking, and administrative oversight — built to replace spreadsheet-based delivery management.',
           badge: 'Flagship build',
           featured: true,
           visual: 'pipeline',
@@ -65,24 +76,22 @@ window.PORTFOLIO = {
         },
         {
           name: 'Marezi · AI-Driven Web Copywriting',
-          desc: 'Full website copy for an Africa-focused customer experience platform (formerly Q-SYS) serving banks, hospitals, and restaurants — written and structured using an AI-assisted research and drafting workflow.',
           visual: 'marezi',
           href: 'projects/marezi.html',
         },
         {
-          name: 'FutureGenerali · Website Lifecycle Copy & AI Chatbot Enablement',
-          desc: 'Website content managed in Strapi CMS, alongside AI chatbot conversational flows designed in Figma — structured around pre-determined decision trees for a regulated insurance context.',
+          name: 'Website Lifecycle Copy & AI Chatbot Enablement',
           visual: 'generali',
           href: 'projects/futuregenerali.html',
         },
         {
           name: 'Signifikant · Social Media Content Strategy',
-          desc: 'LinkedIn content strategy and execution for a B2B industrial tech brand — including carousels, thought leadership posts, and employer branding.',
           visual: 'signifikant',
           href: 'projects/signifikant.html',
         },
       ],
       responsibilities: [
+        'Shifted into product marketing for LexiConn AI at seed stage — built end-to-end content and distribution infrastructure for Card2Connect across sales enablement, objection handling, multi-audience segmented content, and channel-mapped distribution, all oriented around a single conversion metric.',
         'Designed and shipped an AI content QC system now used daily by 19 strategists, editors, and writers; revision rounds reduced by 40–50%.',
         'Owned editorial direction on enterprise accounts including HDFC, FutureGenerali, Marezi, Micron India, Hexaware, and Sakon.',
         'Authored voice frameworks and content models that survived agency-to-in-house handovers without rework.',
@@ -100,19 +109,16 @@ window.PORTFOLIO = {
       projects: [
         {
           name: 'Jupiter Money · Product & Brand Copy',
-          desc: 'Onboarding flows, microcopy, and brand-led launch pages for the Jupiter Money neobank.',
           visual: 'jupiter',
           href: 'projects/jupiter-money.html',
         },
         {
           name: 'Paperflite · Sales Enablement',
-          desc: 'Sales content stories, landing pages, and product walkthroughs for the Paperflite content intelligence platform.',
           visual: 'paperflite',
           href: 'projects/paperflite.html',
         },
         {
           name: 'Advertorial & Editorial Content',
-          desc: 'Research-driven advertorials and product reviews published on Geeky Gadgets, Amazon Business, and India.com — written to inform and convert.',
           visual: 'advertorial',
           href: 'projects/advertorial.html',
         },
@@ -173,7 +179,7 @@ window.PORTFOLIO = {
   education: [
     { name: 'B.Sc — Mathematics',                   detail: 'Mahamaya Technical University (MTUN), Noida, India — 2019' },
     { name: 'Professional Copywriting Certificate', detail: 'Alan Sharpe, Udemy — 2025' },
-    { name: 'Introduction to Generative AI',        detail: 'Google Cloud Skills Boost' },
+    { name: 'Introduction to Generative AI',        detail: 'Google Cloud Skills Boost — 2024' },
   ],
 
   /* `key` maps to a branded glyph tile in app.js (SOCIALS) */

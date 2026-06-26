@@ -52,6 +52,7 @@
     signifikant: { bg: '#0e1620', a: '#6fb9ff', b: '#2a73c4' },
     advertorial: { bg: '#1c1814', a: '#ffd084', b: '#c2873a' },
     generali:    { bg: '#101830', a: '#7a8cff', b: '#3a4cc4' },
+    card2connect:{ bg: '#0c1f24', a: '#5fe0d0', b: '#1f9a9a' },
   };
 
   function repeat(n, fn) {
@@ -174,6 +175,27 @@
         '<path d="M165 155 L195 185 L235 130" fill="none" stroke="' + a + '" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>' +
       '</g>';
     },
+    card2connect: function (a, bg) {
+      // Two contact cards linked by a dashed arc — the "networking follow-up".
+      // Kept inside the vertically-centred band that survives the 21/9 crop.
+      function card(x, fill, op) {
+        return '<g transform="translate(' + x + ',110)">' +
+          '<rect width="120" height="80" rx="12" fill="' + fill + '"' + (op ? ' opacity="' + op + '"' : '') + ' stroke="' + a + '" stroke-width="1.3"/>' +
+          '<circle cx="26" cy="28" r="12" fill="' + a + '" opacity=".45"/>' +
+          '<rect x="46" y="20" width="54" height="6" rx="3" fill="' + a + '"/>' +
+          '<rect x="46" y="34" width="38" height="4" rx="2" fill="' + a + '" opacity=".5"/>' +
+          '<rect x="20" y="58" width="80" height="4" rx="2" fill="' + a + '" opacity=".35"/>' +
+        '</g>';
+      }
+      return '<g>' +
+        '<path d="M120 150 C 180 92, 220 92, 280 150" fill="none" stroke="' + a + '" stroke-width="1.5" stroke-opacity=".55" stroke-dasharray="4 6"/>' +
+        card(60, bg, null) +
+        card(220, a, '.14') +
+        '<circle cx="120" cy="150" r="5" fill="' + a + '"/>' +
+        '<circle cx="280" cy="150" r="5" fill="' + a + '"/>' +
+        '<circle cx="200" cy="106" r="4" fill="' + a + '" opacity=".85"/>' +
+      '</g>';
+    },
   };
 
   function projectVisual(kind) {
@@ -246,7 +268,7 @@
       '<div class="scrim"></div>' +
       (p.badge ? '<span class="badge-feat">' + esc(p.badge) + '</span>' : '') +
       '<span class="arrow">' + icon('Arrow', 'style="width:16px;height:16px"') + '</span>' +
-      '<div class="label"><div class="name">' + esc(p.name) + '</div><div class="desc">' + esc(p.desc) + '</div></div>' +
+      '<div class="label"><div class="name">' + esc(p.name) + '</div></div>' +
     '</a>';
   }
 
@@ -267,6 +289,71 @@
         subRole +
       '</div><p class="role-scope">' + esc(role.scope) + '</p></div>' +
       projects + resp + '</div>';
+  }
+
+  function renderCompetencies() {
+    if (!P.competencies || !P.competencies.length) return '';
+    var DECOS = [
+      // Systems Engineering — network nodes
+      '<svg viewBox="0 0 64 48" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+        '<circle cx="8" cy="24" r="3.5" fill="#ffb347" fill-opacity=".5"/>' +
+        '<circle cx="32" cy="8" r="3.5" fill="#ffb347" fill-opacity=".5"/>' +
+        '<circle cx="32" cy="40" r="3.5" fill="#ffb347" fill-opacity=".5"/>' +
+        '<circle cx="56" cy="24" r="3.5" fill="#ffb347" fill-opacity=".5"/>' +
+        '<line x1="11" y1="22" x2="29" y2="10" stroke="#ffb347" stroke-opacity=".3" stroke-width="1.2"/>' +
+        '<line x1="11" y1="26" x2="29" y2="38" stroke="#ffb347" stroke-opacity=".3" stroke-width="1.2"/>' +
+        '<line x1="35" y1="10" x2="53" y2="22" stroke="#ffb347" stroke-opacity=".3" stroke-width="1.2"/>' +
+        '<line x1="35" y1="38" x2="53" y2="26" stroke="#ffb347" stroke-opacity=".3" stroke-width="1.2"/>' +
+        '<line x1="32" y1="12" x2="32" y2="36" stroke="#ffb347" stroke-opacity=".12" stroke-width="1" stroke-dasharray="3 3"/>' +
+      '</svg>',
+      // Product Marketing & GTM — bar chart with trend line + nodes
+      '<svg viewBox="0 0 64 46" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+        '<rect x="2"  y="30" width="9" height="12" rx="1.5" fill="#ffb347" fill-opacity=".45"/>' +
+        '<rect x="14" y="23" width="9" height="19" rx="1.5" fill="#ffb347" fill-opacity=".45"/>' +
+        '<rect x="26" y="17" width="9" height="25" rx="1.5" fill="#ffb347" fill-opacity=".45"/>' +
+        '<rect x="38" y="10" width="9" height="32" rx="1.5" fill="#ffb347" fill-opacity=".45"/>' +
+        '<rect x="50" y="4"  width="9" height="38" rx="1.5" fill="#ffb347" fill-opacity=".45"/>' +
+        '<polyline points="6.5,30 18.5,23 30.5,17 42.5,10 54.5,4" stroke="#ffb347" stroke-opacity=".8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '<circle cx="6.5"  cy="30" r="2.5" fill="#221c18" stroke="#ffb347" stroke-width="1.3"/>' +
+        '<circle cx="18.5" cy="23" r="2.5" fill="#221c18" stroke="#ffb347" stroke-width="1.3"/>' +
+        '<circle cx="30.5" cy="17" r="2.5" fill="#221c18" stroke="#ffb347" stroke-width="1.3"/>' +
+        '<circle cx="42.5" cy="10" r="2.5" fill="#221c18" stroke="#ffb347" stroke-width="1.3"/>' +
+        '<circle cx="54.5" cy="4"  r="2.5" fill="#221c18" stroke="#ffb347" stroke-width="1.3"/>' +
+        '<line x1="0" y1="43" x2="64" y2="43" stroke="#ffb347" stroke-opacity=".15" stroke-width="1"/>' +
+      '</svg>',
+      // Content Operations — layered flow bars with arrows
+      '<svg viewBox="0 0 64 48" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+        '<rect x="4" y="6" width="24" height="8" rx="2" fill="#ffb347" fill-opacity=".15" stroke="#ffb347" stroke-opacity=".3" stroke-width="1"/>' +
+        '<rect x="4" y="20" width="38" height="8" rx="2" fill="#ffb347" fill-opacity=".15" stroke="#ffb347" stroke-opacity=".3" stroke-width="1"/>' +
+        '<rect x="4" y="34" width="30" height="8" rx="2" fill="#ffb347" fill-opacity=".15" stroke="#ffb347" stroke-opacity=".3" stroke-width="1"/>' +
+        '<path d="M31 10 L38 10 M35 7.5 L38 10 L35 12.5" stroke="#ffb347" stroke-opacity=".45" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '<path d="M45 24 L52 24 M49 21.5 L52 24 L49 26.5" stroke="#ffb347" stroke-opacity=".45" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>' +
+      '</svg>',
+      // GEO & AI Strategy — concentric signal rings
+      '<svg viewBox="0 0 64 48" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+        '<circle cx="32" cy="24" r="4" fill="#ffb347" fill-opacity=".6"/>' +
+        '<circle cx="32" cy="24" r="11" stroke="#ffb347" stroke-opacity=".3" stroke-width="1.2"/>' +
+        '<circle cx="32" cy="24" r="18" stroke="#ffb347" stroke-opacity=".18" stroke-width="1"/>' +
+        '<circle cx="32" cy="24" r="26" stroke="#ffb347" stroke-opacity=".09" stroke-width="1"/>' +
+        '<line x1="32" y1="1" x2="32" y2="7" stroke="#ffb347" stroke-opacity=".35" stroke-width="1.5" stroke-linecap="round"/>' +
+        '<line x1="32" y1="41" x2="32" y2="47" stroke="#ffb347" stroke-opacity=".35" stroke-width="1.5" stroke-linecap="round"/>' +
+        '<line x1="5" y1="24" x2="11" y2="24" stroke="#ffb347" stroke-opacity=".35" stroke-width="1.5" stroke-linecap="round"/>' +
+        '<line x1="53" y1="24" x2="59" y2="24" stroke="#ffb347" stroke-opacity=".35" stroke-width="1.5" stroke-linecap="round"/>' +
+      '</svg>',
+    ];
+    var items = P.competencies.map(function (c, i) {
+      return '<div class="competency-item reveal">' +
+        '<div class="competency-header">' +
+          '<div class="competency-title">' + esc(c.title) + '</div>' +
+          '<div class="competency-deco">' + (DECOS[i] || '') + '</div>' +
+        '</div>' +
+        '<p class="competency-desc">' + esc(c.desc) + '</p>' +
+      '</div>';
+    }).join('');
+    return '<section id="competencies"><div class="shell"><div class="content-col">' +
+      '<h2 class="section-h reveal">Core<br>Competencies</h2>' +
+      '<div class="competencies-grid">' + items + '</div>' +
+      '</div></div></section>';
   }
 
   function renderExperience() {
@@ -395,7 +482,7 @@
       else { blur = 0; opacity = 1; }
       // Reaching the bottom of the page = journey complete → guarantee fully sharp.
       if (y + vh >= document.documentElement.scrollHeight - 2) { blur = 0; opacity = 1; }
-      return { blur: blur, opacity: opacity, haloOp: 0.65 + (1 - opacity) * 0.55 };
+      return { blur: blur, opacity: opacity, haloOp: opacity * 0.65 };
     }
     function apply() {
       var s = compute();
@@ -504,7 +591,7 @@
 
   /* ── boot ─── Original Work by Titash Sinha ───────────────────────────── */
   document.getElementById('root').innerHTML =
-    renderPortrait() + renderHero() + renderSummary() + renderExperience() +
+    renderPortrait() + renderHero() + renderSummary() + renderCompetencies() + renderExperience() +
     renderSkills() + renderLinks() + renderCVButton() + renderNav();
 
   initReveal();
