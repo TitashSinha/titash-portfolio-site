@@ -9,7 +9,7 @@ window.PORTFOLIO = {
   /* asset paths — change here, not in markup */
   assets: {
     portrait: 'assets/images/portrait.png',
-    resume: 'assets/files/Titash_Sinha_ContentOps_Master.pdf',
+    resume: 'assets/files/Titash_Sinha_ContentStrategist_Master.pdf',
     sheet: 'https://docs.google.com/spreadsheets/d/1XShVbjFH53N-KIyUOIot3x3_7_Daw5x_9LvM_J0KsUo/edit?gid=361504315#gid=361504315',
   },
 
@@ -61,18 +61,18 @@ window.PORTFOLIO = {
           href: 'projects/ai-qc-tool.html',
         },
         {
-          name: 'Card2Connect · Seed-Stage Product Marketing',
-          badge: 'Product Launch',
-          featured: true,
-          visual: 'card2connect',
-          href: 'projects/card2connect.html',
-        },
-        {
           name: 'Content Pipeline Tracker',
           badge: 'Flagship build',
           featured: true,
           visual: 'pipeline',
           href: 'projects/content-pipeline-tracker.html',
+        },
+        {
+          name: 'HDFC · Figma UI/UX Microcopy',
+          badge: 'Flagship build',
+          featured: true,
+          visual: 'hdfc',
+          href: 'projects/hdfc.html',
         },
         {
           name: 'Marezi · AI-Driven Web Copywriting',
@@ -89,6 +89,22 @@ window.PORTFOLIO = {
           visual: 'signifikant',
           href: 'projects/signifikant.html',
         },
+        {
+          name: 'Worldline · Payment Gateway API Developer Guide',
+          badge: 'Featured snippet',
+          visual: 'worldline',
+          href: 'projects/worldline.html',
+        },
+        {
+          name: 'Mastertrust · Trading Platform Copy',
+          visual: 'mastertrust',
+          href: 'projects/mastertrust.html',
+        },
+        {
+          name: 'Avalani Insurance · Website Copy',
+          visual: 'avalani',
+          href: 'projects/avalani.html',
+        },
       ],
       responsibilities: [
         'Shifted into product marketing for LexiConn AI at seed stage — built end-to-end content and distribution infrastructure for Card2Connect across sales enablement, objection handling, multi-audience segmented content, and channel-mapped distribution, all oriented around a single conversion metric.',
@@ -97,6 +113,10 @@ window.PORTFOLIO = {
         'Authored voice frameworks and content models that survived agency-to-in-house handovers without rework.',
         'Acted as Team Lead Feb–Aug 2025: managed 3 writers and 1 graphic designer, ran feedback cycles, and maintained delivery timelines across all concurrent accounts.',
         'Built brief-to-handoff templates and prompt systems that cut average kickoff time by roughly 40%.',
+        'Shipped landing pages, in-product copy, UI/UX copy, and social media assets for 3–5 B2B SaaS clients on weekly cadences.',
+        'Coordinated a 3-writer overnight desk for MediaCo — a LexiConn engagement that became a yearlong contract — publishing 200+ sub-500-word articles per month via WordPress for syndicated Yahoo and MSN brands, using AI-assisted drafting with human-in-the-loop QC.',
+        'Delivered 25–30 optimized articles and 10+ long-form assets per month, including insurance content for FutureGenerali published via Strapi CMS.',
+        'Ran content audits and keyword and search-intent research in SEMrush and Search Console to close content gaps and inform on-page SEO — contributing to 2× organic traffic growth for banking and insurance clients.',
       ],
     },
     {
@@ -125,6 +145,7 @@ window.PORTFOLIO = {
       ],
       responsibilities: [
         'Shipped landing pages, in-product copy, and email sequences for 8+ B2B SaaS clients on weekly cadences.',
+        'Produced whitepapers, eBooks, and case studies for US, UK, and Middle East B2B software clients on a weekly cadence, adapting brand voice across multiple industries.',
         'Built and maintained per-client style sheets and tone-of-voice documents.',
         'Worked directly with product, design, and marketing teams across India and South Asia.',
       ],
@@ -147,8 +168,10 @@ window.PORTFOLIO = {
   skills: [
     'AI Workflow Development',
     'Prompt Engineering & Context Design',
-    'LLM Tool Development & Deployment',
     'Content Operations',
+    'Data-Driven Content Strategy',
+    'SEO & Search-Intent Research',
+    'Content Performance Analysis',
     'Answer Engine Optimization (GEO)',
     'Editorial QC & Style Guides',
     'Voice & Brand Systems',
@@ -156,18 +179,18 @@ window.PORTFOLIO = {
   ],
 
   tools: [
-    { name: 'Claude',             logo: 'assets/logos/claude.svg' },
-    { name: 'Claude Code',        logo: 'assets/logos/claude-code.svg' },
-    { name: 'Claude Design',      logo: 'assets/logos/claude-design.svg' },
-    { name: 'ChatGPT',            logo: 'assets/logos/chatgpt.svg' },
-    { name: 'Notebook LM',        logo: 'assets/logos/notebooklm.svg' },
-    { name: 'ElevenLabs',         logo: 'assets/logos/elevenlabs.svg' },
-    { name: 'Figma',              logo: 'assets/logos/figma.svg' },
-    { name: 'Google Antigravity', logo: 'assets/logos/antigravity.svg' },
-    { name: 'Notion',             logo: 'assets/logos/notion.svg' },
-    { name: 'Canva',              logo: 'assets/logos/canva.svg' },
-    { name: 'Perplexity',         logo: 'assets/logos/perplexity.svg' },
-    { name: 'GitHub Copilot',     logo: 'assets/logos/github-copilot.svg' },
+    { name: 'Claude',           logo: 'assets/logos/claude.svg' },
+    { name: 'ChatGPT',          logo: 'assets/logos/chatgpt.svg' },
+    { name: 'Perplexity',       logo: 'assets/logos/perplexity.svg' },
+    { name: 'Notebook LM',      logo: 'assets/logos/notebooklm.svg' },
+    { name: 'Semrush',          logo: 'assets/logos/semrush.svg' },
+    { name: 'Google Analytics', logo: 'assets/logos/google-analytics.svg' },
+    { name: 'WordPress',        logo: 'assets/logos/wordpress.svg' },
+    { name: 'Figma',            logo: 'assets/logos/figma.svg' },
+    { name: 'Notion',           logo: 'assets/logos/notion.svg' },
+    { name: 'Canva',            logo: 'assets/logos/canva.svg' },
+    { name: 'ElevenLabs',       logo: 'assets/logos/elevenlabs.svg' },
+    { name: 'Claude Design',    logo: 'assets/logos/claude-design.svg' },
   ],
 
   languages: [
