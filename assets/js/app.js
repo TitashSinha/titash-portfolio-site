@@ -52,7 +52,10 @@
     signifikant: { bg: '#0e1620', a: '#6fb9ff', b: '#2a73c4' },
     advertorial: { bg: '#1c1814', a: '#ffd084', b: '#c2873a' },
     generali:    { bg: '#101830', a: '#7a8cff', b: '#3a4cc4' },
-    card2connect:{ bg: '#0c1f24', a: '#5fe0d0', b: '#1f9a9a' },
+    worldline:   { bg: '#0d1b2a', a: '#6fd3ff', b: '#2a73c4' },
+    mastertrust: { bg: '#0e1f16', a: '#5be08a', b: '#1f9a55' },
+    avalani:     { bg: '#0c1f24', a: '#5fe0d0', b: '#1f9a9a' },
+    hdfc:        { bg: '#0c1424', a: '#7fa0ff', b: '#2f4bd0' },
   };
 
   function repeat(n, fn) {
@@ -175,25 +178,74 @@
         '<path d="M165 155 L195 185 L235 130" fill="none" stroke="' + a + '" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>' +
       '</g>';
     },
-    card2connect: function (a, bg) {
-      // Two contact cards linked by a dashed arc — the "networking follow-up".
-      // Kept inside the vertically-centred band that survives the 21/9 crop.
-      function card(x, fill, op) {
-        return '<g transform="translate(' + x + ',110)">' +
-          '<rect width="120" height="80" rx="12" fill="' + fill + '"' + (op ? ' opacity="' + op + '"' : '') + ' stroke="' + a + '" stroke-width="1.3"/>' +
-          '<circle cx="26" cy="28" r="12" fill="' + a + '" opacity=".45"/>' +
-          '<rect x="46" y="20" width="54" height="6" rx="3" fill="' + a + '"/>' +
-          '<rect x="46" y="34" width="38" height="4" rx="2" fill="' + a + '" opacity=".5"/>' +
-          '<rect x="20" y="58" width="80" height="4" rx="2" fill="' + a + '" opacity=".35"/>' +
-        '</g>';
-      }
+    worldline: function (a, bg) {
+      // Developer guide: a document with code lines and a highlighted
+      // featured-snippet block, plus an API brace glyph.
       return '<g>' +
-        '<path d="M120 150 C 180 92, 220 92, 280 150" fill="none" stroke="' + a + '" stroke-width="1.5" stroke-opacity=".55" stroke-dasharray="4 6"/>' +
-        card(60, bg, null) +
-        card(220, a, '.14') +
-        '<circle cx="120" cy="150" r="5" fill="' + a + '"/>' +
-        '<circle cx="280" cy="150" r="5" fill="' + a + '"/>' +
-        '<circle cx="200" cy="106" r="4" fill="' + a + '" opacity=".85"/>' +
+        '<rect x="86" y="52" width="200" height="206" rx="12" fill="' + bg + '" stroke="' + a + '" stroke-opacity=".4"/>' +
+        '<text x="106" y="84" font-family="Geist Mono, monospace" font-size="9" letter-spacing="2" fill="' + a + '">DEVELOPER GUIDE</text>' +
+        '<rect x="106" y="98" width="120" height="5" rx="2" fill="' + a + '"/>' +
+        '<rect x="106" y="112" width="150" height="4" rx="2" fill="' + a + '" opacity=".5"/>' +
+        '<rect x="106" y="124" width="132" height="4" rx="2" fill="' + a + '" opacity=".5"/>' +
+        '<rect x="100" y="142" width="172" height="48" rx="8" fill="' + a + '" opacity=".13" stroke="' + a + '" stroke-opacity=".4"/>' +
+        '<rect x="112" y="154" width="86" height="5" rx="2" fill="' + a + '"/>' +
+        '<rect x="112" y="168" width="134" height="4" rx="2" fill="' + a + '" opacity=".6"/>' +
+        '<rect x="106" y="206" width="150" height="4" rx="2" fill="' + a + '" opacity=".5"/>' +
+        '<rect x="106" y="218" width="118" height="4" rx="2" fill="' + a + '" opacity=".5"/>' +
+        '<text x="300" y="168" font-family="Geist Mono, monospace" font-size="46" fill="' + a + '" opacity=".45">{}</text>' +
+      '</g>';
+    },
+    mastertrust: function (a) {
+      // Trading platform: candlesticks with a trend line over a faint grid.
+      var candles = [[122, 150, 40], [152, 120, 60], [182, 140, 44], [212, 100, 70], [242, 128, 50], [272, 92, 64]];
+      return '<g>' +
+        '<g opacity=".18" stroke="' + a + '" stroke-width="1">' +
+          repeat(6, function (i) { return '<line x1="84" y1="' + (74 + i * 30) + '" x2="330" y2="' + (74 + i * 30) + '"/>'; }) +
+        '</g>' +
+        candles.map(function (c) {
+          var x = c[0], top = c[1], h = c[2];
+          return '<line x1="' + (x + 8) + '" y1="' + (top - 14) + '" x2="' + (x + 8) + '" y2="' + (top + h + 14) + '" stroke="' + a + '" stroke-opacity=".5"/>' +
+            '<rect x="' + x + '" y="' + top + '" width="16" height="' + h + '" rx="2" fill="' + a + '" opacity=".5"/>';
+        }).join('') +
+        '<polyline points="130,150 160,120 190,140 220,100 250,128 280,92" fill="none" stroke="' + a + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
+      '</g>';
+    },
+    avalani: function (a) {
+      // Insurance: a shield with a check, flanked by quiet nodes.
+      return '<g>' +
+        '<path d="M200 58 L286 96 L286 168 Q286 222 200 252 Q114 222 114 168 L114 96 Z" fill="' + a + '" opacity=".15" stroke="' + a + '" stroke-width="1.5"/>' +
+        '<path d="M166 156 L192 184 L238 126" fill="none" stroke="' + a + '" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '<g opacity=".4" fill="' + a + '"><circle cx="150" cy="86" r="3"/><circle cx="250" cy="86" r="3"/><circle cx="200" cy="232" r="3"/></g>' +
+      '</g>';
+    },
+    hdfc: function (a, bg) {
+      // UI/UX microcopy: a mobile screen with form microcopy and Figma-style
+      // annotation callouts. Kept inside the band that survives the 21/9 crop.
+      return '<g>' +
+        '<g transform="translate(70,78)">' +
+          '<rect width="150" height="150" rx="18" fill="' + bg + '" stroke="' + a + '" stroke-opacity=".4" stroke-width="1.5"/>' +
+          '<text x="20" y="34" font-family="Geist Mono, monospace" font-size="9" letter-spacing="1.5" fill="' + a + '">EMAIL</text>' +
+          '<rect x="20" y="42" width="110" height="26" rx="7" fill="' + a + '" opacity=".10" stroke="' + a + '" stroke-opacity=".3"/>' +
+          '<rect x="28" y="52" width="60" height="5" rx="2" fill="' + a + '" opacity=".55"/>' +
+          '<circle cx="24" cy="82" r="3" fill="#ff8a5b"/>' +
+          '<rect x="34" y="79" width="96" height="5" rx="2" fill="#ff8a5b" opacity=".7"/>' +
+          '<rect x="20" y="104" width="110" height="30" rx="9" fill="' + a + '"/>' +
+          '<rect x="52" y="116" width="46" height="6" rx="3" fill="' + bg + '"/>' +
+        '</g>' +
+        '<g font-family="Geist Mono, monospace" font-size="8" letter-spacing="1.5">' +
+          '<path d="M230 110 h70" stroke="' + a + '" stroke-opacity=".4" stroke-dasharray="3 4"/>' +
+          '<circle cx="230" cy="110" r="3" fill="' + a + '"/>' +
+          '<rect x="300" y="96" width="72" height="30" rx="8" fill="' + a + '" opacity=".12" stroke="' + a + '" stroke-opacity=".35"/>' +
+          '<text x="312" y="115" fill="' + a + '">LABEL</text>' +
+          '<path d="M212 160 h96" stroke="' + a + '" stroke-opacity=".4" stroke-dasharray="3 4"/>' +
+          '<circle cx="212" cy="160" r="3" fill="#ff8a5b"/>' +
+          '<rect x="308" y="146" width="78" height="30" rx="8" fill="#ff8a5b" opacity=".12" stroke="#ff8a5b" stroke-opacity=".35"/>' +
+          '<text x="320" y="165" fill="#ff8a5b">ERROR</text>' +
+          '<path d="M230 196 h60" stroke="' + a + '" stroke-opacity=".4" stroke-dasharray="3 4"/>' +
+          '<circle cx="230" cy="196" r="3" fill="' + a + '"/>' +
+          '<rect x="290" y="182" width="70" height="30" rx="8" fill="' + a + '" opacity=".12" stroke="' + a + '" stroke-opacity=".35"/>' +
+          '<text x="302" y="201" fill="' + a + '">CTA</text>' +
+        '</g>' +
       '</g>';
     },
   };
@@ -428,7 +480,7 @@
   }
 
   function renderCVButton() {
-    return '<a class="cv-btn" href="' + esc(P.assets.resume) + '" download="Titash_Sinha_AI_Content_Strategist_Resume.pdf" target="_blank" rel="noopener">' +
+    return '<a class="cv-btn" href="' + esc(P.assets.resume) + '" download="Titash_Sinha_Content_Strategist_Resume.pdf" target="_blank" rel="noopener">' +
       icon('Download', 'class="icon"') + 'Download CV</a>';
   }
 

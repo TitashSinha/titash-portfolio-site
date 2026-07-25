@@ -1,0 +1,169 @@
+<!doctype html>
+<!-- Original Work by Titash Sinha — AI Content Strategist. Please retain attribution. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Worldline · Payment Gateway API Developer Guide — Titash Sinha</title>
+<link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Anton&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <div class="glow-layer"></div>
+  <div class="grain"></div>
+  <div class="vignette"></div>
+
+  <main class="page">
+    <div class="shell">
+
+      <div class="top-bar">
+        <a class="back-link" href="../index.html#experience">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5"/><path d="m12 19-7-7 7-7"/>
+          </svg>
+          Back to portfolio
+        </a>
+        <span class="badge">Featured snippet</span>
+      </div>
+
+      <div class="project-hero">
+        <svg viewBox="0 0 1400 600" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="wlbg" cx="70%" cy="38%" r="80%">
+              <stop offset="0%" stop-color="#6fd3ff" stop-opacity=".5"/>
+              <stop offset="45%" stop-color="#2a73c4" stop-opacity=".32"/>
+              <stop offset="100%" stop-color="#0d1b2a" stop-opacity="1"/>
+            </radialGradient>
+          </defs>
+          <rect width="1400" height="600" fill="#0d1b2a"/>
+          <rect width="1400" height="600" fill="url(#wlbg)"/>
+
+          <!-- browser-style card -->
+          <g transform="translate(180,80)">
+            <rect width="1040" height="440" rx="20" fill="#0a1622" stroke="rgba(111,211,255,.4)" stroke-width="1.5"/>
+            <rect x="0" y="0" width="1040" height="46" rx="20" fill="rgba(255,255,255,.04)"/>
+            <rect x="0" y="20" width="1040" height="26" fill="rgba(255,255,255,.04)"/>
+            <circle cx="22" cy="23" r="5" fill="#ff5f56"/>
+            <circle cx="42" cy="23" r="5" fill="#ffbd2e"/>
+            <circle cx="62" cy="23" r="5" fill="#27c93f"/>
+            <text x="520" y="28" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" fill="rgba(245,236,224,.55)">worldline · developer docs · payment gateway API</text>
+
+            <!-- left: article body -->
+            <g transform="translate(56,86)">
+              <text font-family="Geist Mono, monospace" font-size="10" letter-spacing="3" fill="#6fd3ff">TOFU · TECHNICAL GUIDE</text>
+              <text y="44" font-family="Anton" font-size="34" fill="#f5ece0">Integrating the</text>
+              <text y="82" font-family="Anton" font-size="34" fill="#6fd3ff">Payment Gateway API</text>
+              <rect y="108" width="520" height="6" rx="3" fill="rgba(245,236,224,.18)"/>
+              <rect y="126" width="470" height="6" rx="3" fill="rgba(245,236,224,.14)"/>
+              <rect y="144" width="500" height="6" rx="3" fill="rgba(245,236,224,.14)"/>
+
+              <!-- featured-snippet answer box -->
+              <g transform="translate(0,176)">
+                <rect width="520" height="120" rx="12" fill="rgba(111,211,255,.10)" stroke="rgba(111,211,255,.4)"/>
+                <text x="18" y="28" font-family="Geist Mono, monospace" font-size="10" letter-spacing="2" fill="#6fd3ff">FEATURED SNIPPET · READY</text>
+                <text x="18" y="56" font-family="Geist" font-size="14" fill="#f5ece0">How do I authenticate a payment request?</text>
+                <rect x="18" y="72" width="360" height="5" rx="2" fill="rgba(245,236,224,.5)"/>
+                <rect x="18" y="86" width="410" height="5" rx="2" fill="rgba(245,236,224,.35)"/>
+                <rect x="18" y="100" width="300" height="5" rx="2" fill="rgba(245,236,224,.35)"/>
+              </g>
+            </g>
+
+            <!-- right: code request/response -->
+            <g transform="translate(636,86)">
+              <rect width="348" height="300" rx="14" fill="rgba(111,211,255,.07)" stroke="rgba(111,211,255,.26)"/>
+              <text x="20" y="32" font-family="Geist Mono, monospace" font-size="10" letter-spacing="2" fill="#6fd3ff">POST /v1/payments</text>
+              <g font-family="Geist Mono, monospace" font-size="12" fill="rgba(245,236,224,.72)">
+                <text x="20" y="66">{</text>
+                <text x="36" y="88">"amount": 4200,</text>
+                <text x="36" y="110">"currency": "EUR",</text>
+                <text x="36" y="132">"capture": true,</text>
+                <text x="36" y="154">"reference": "ord_10Q4"</text>
+                <text x="20" y="176">}</text>
+              </g>
+              <rect x="20" y="196" width="308" height="1" fill="rgba(111,211,255,.2)"/>
+              <text x="20" y="222" font-family="Geist Mono, monospace" font-size="10" letter-spacing="2" fill="#27c93f">200 · AUTHORISED</text>
+              <g font-family="Geist Mono, monospace" font-size="12" fill="rgba(245,236,224,.6)">
+                <text x="20" y="250">"status": "captured",</text>
+                <text x="20" y="272">"id": "pay_8fK2c1"</text>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div class="eyebrow">LexiConn · Selected Work</div>
+      <h1 class="project-title">Worldline<br/>Payment Gateway API Guide</h1>
+      <p class="descriptor">A long-form technical guide walking developers through Worldline's payment gateway API integration — structured around search intent and formatted for featured-snippet capture.</p>
+
+      <div class="meta">
+        <div class="item"><span class="lbl">Client</span><span class="val">Worldline</span></div>
+        <div class="item"><span class="lbl">Format</span><span class="val">Long-form technical</span></div>
+        <div class="item"><span class="lbl">Intent</span><span class="val">TOFU · Technical</span></div>
+        <div class="item"><span class="lbl">Status</span><span class="val">Live</span></div>
+      </div>
+
+      <section class="body-section">
+        <h2>Context</h2>
+        <p>Worldline is a global payments and transactional services company. The brief was a top-of-funnel developer guide: the kind of documentation-adjacent content a developer finds mid-task, while deciding whether an API is worth integrating at all.</p>
+      </section>
+
+      <section class="body-section">
+        <h2>The brief</h2>
+        <p>Explain payment gateway API integration to a technical reader without drowning them in marketing. The audience arrives with a specific question — authentication, request shape, error handling — and leaves the moment the page stops answering it. The piece had to earn the click and hold it through the depth a developer expects.</p>
+      </section>
+
+      <section class="body-section">
+        <h2>Approach</h2>
+        <p>The structure was driven by search intent, not a house outline. Each section maps to a real query a developer types — "how do I authenticate a payment request", "what does a capture response look like" — and answers it in the first two sentences, then expands. That answer-first formatting is what makes a passage eligible for a featured snippet.</p>
+        <ul>
+          <li>Query-mapped headings, so the page matches the way developers actually search.</li>
+          <li>Answer-first passages formatted for featured-snippet and People-Also-Ask capture.</li>
+          <li>Concrete request/response examples over prose, because that is what a technical reader trusts.</li>
+        </ul>
+      </section>
+
+      <section class="body-section">
+        <h2>Deliverable</h2>
+        <p>Published long-form technical guide; live. Written to rank for and capture featured-snippet placement on integration queries.</p>
+      </section>
+
+      <section class="body-section">
+        <h2>Live work</h2>
+        <a class="ext-link" href="https://docs.google.com/spreadsheets/d/1XShVbjFH53N-KIyUOIot3x3_7_Daw5x_9LvM_J0KsUo/edit?gid=361504315#gid=361504315" target="_blank" rel="noopener">
+          <span class="glyph">☷</span>
+          View live link in portfolio sheet
+          <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+        </a>
+      </section>
+
+      <div class="next">
+        <div class="next-row">
+          <a class="next-link prev" href="signifikant.html">
+            <div class="eyebrow">Previous</div>
+            <div class="label">
+              <svg class="next-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+              Signifikant · Social media
+            </div>
+          </a>
+          <a class="next-link up" href="mastertrust.html">
+            <div class="eyebrow">Up next</div>
+            <div class="label">
+              Mastertrust · Trading platform
+              <svg class="next-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+            </div>
+          </a>
+        </div>
+        <a class="back-cta" href="../index.html#experience">
+          <span class="arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
+          <span>Back to portfolio</span>
+        </a>
+      </div>
+
+    </div>
+    <div class="footer">© 2026 Titash Sinha. All rights reserved.</div>
+  </main>
+</body>
+</html>
