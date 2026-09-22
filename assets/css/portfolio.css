@@ -6,7 +6,6 @@
   /* design tokens — Original Work by Titash Sinha */
   /* surface / ink */
   --bg: #15110f;
-  --bg-2: #1c1714;
   --surface: #221c18;
   --surface-2: #2a221d;
   --hairline: rgba(245,235,220,.08);
@@ -130,8 +129,6 @@ section.links{
 .reveal.in{opacity:1; transform:translateY(0)}
 .reveal-d1{transition-delay:.08s}
 .reveal-d2{transition-delay:.16s}
-.reveal-d3{transition-delay:.24s}
-
 /* hero */
 .live-badge{
   display:inline-flex; align-items:center; gap:10px;

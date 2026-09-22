@@ -10,7 +10,6 @@
   --text-mute: rgba(245,236,224,.38);
   --amber: #ffb347;
   --amber-2: #ffc977;
-  --amber-deep: #c97c2a;
   --display: 'Bebas Neue', 'Anton', sans-serif;
   --body: 'Geist', system-ui, sans-serif;
 }
@@ -201,13 +200,6 @@ body{
   font-size:12px;
 }
 .ext-link .arr{ width:14px; height:14px; color:var(--amber); }
-.ext-link.placeholder{
-  opacity:.7;
-  color:var(--text-dim);
-  cursor:not-allowed;
-}
-.ext-link.placeholder .glyph{ background:var(--text-mute); }
-
 /* stack chips */
 .stack{
   display:flex; gap:10px; flex-wrap:wrap;

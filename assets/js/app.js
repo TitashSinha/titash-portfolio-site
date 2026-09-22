@@ -480,7 +480,7 @@
   }
 
   function renderCVButton() {
-    return '<a class="cv-btn" href="' + esc(P.assets.resume) + '" download="Titash_Sinha_Content_Strategist_Resume.pdf" target="_blank" rel="noopener">' +
+    return '<a class="cv-btn" href="' + esc(P.assets.resume) + '" download="Titash_Sinha_Content_Strategy_and_Operations.pdf" target="_blank" rel="noopener">' +
       icon('Download', 'class="icon"') + 'Download CV</a>';
   }
 

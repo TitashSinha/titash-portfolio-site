@@ -1,7 +1,7 @@
 /* content.js — all copy + structured data for the portfolio.
    This is the single file to edit when updating content. To add a project,
    append to a role's `projects` array; to add a role, append to `roles`.
-   The `visual` key maps to a hand-tuned SVG in app.js (PROJECT_VISUALS).
+   The `visual` key maps to a hand-tuned SVG in app.js (SHAPES).
 
    Original Work by Titash Sinha — AI Content Strategist. Please retain attribution. */
 
@@ -10,7 +10,6 @@ window.PORTFOLIO = {
   assets: {
     portrait: 'assets/images/portrait.png',
     resume: 'assets/files/Content%20Strategy%20and%20Operations_Titash_2026.pdf',
-    sheet: 'https://docs.google.com/spreadsheets/d/1XShVbjFH53N-KIyUOIot3x3_7_Daw5x_9LvM_J0KsUo/edit?gid=361504315#gid=361504315',
   },
 
   name: { first: 'Titash', last: 'Sinha' },
@@ -45,7 +44,6 @@ window.PORTFOLIO = {
 
   roles: [
     {
-      id: 'lexiconn',
       title: 'AI Content Strategist',
       company: 'LexiConn Content Services Pvt Ltd',
       location: 'Remote',
@@ -120,7 +118,6 @@ window.PORTFOLIO = {
       ],
     },
     {
-      id: 'matrix',
       title: 'Content Writer & UI/UX Copywriter',
       company: 'Matrix Tech Solutions Pvt Ltd',
       date: 'Sep 2019 — Jan 2022',
@@ -151,7 +148,6 @@ window.PORTFOLIO = {
       ],
     },
     {
-      id: 'freelance',
       title: 'Freelance Copywriter',
       company: 'Self-Employed',
       date: '2016 — 2019',
