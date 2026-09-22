@@ -44,11 +44,11 @@ window.PORTFOLIO = {
 
   roles: [
     {
-      title: 'AI Content Strategist',
+      title: 'Content Associate',
       company: 'LexiConn Content Services Pvt Ltd',
       location: 'Remote',
       subRole: 'Acting Team Lead · Feb 2025 – Aug 2025',
-      date: 'Mar 2022 — Present',
+      date: 'Mar 2023 — Sep 2026',
       scope: "AI-first from brief to handoff. Content strategy, editorial systems, and LLM-based tooling built for enterprise B2B clients across fintech, BFSI, IT services, and SaaS. In 2026, LexiConn launched an AI automation suite and the role shifted into product marketing — building content and distribution infrastructure for a four-product suite at seed stage, from zero. Day-to-day work spans UX copy, industry reports, product marketing, and landing pages — anchored by AI workflows which compound quality across every account touched.",
       projects: [
         {
