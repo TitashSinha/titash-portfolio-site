@@ -2,7 +2,7 @@
    Presentation only: icons, social glyphs, and per-project SVGs live here;
    all copy/data lives in content.js. No framework — plain DOM + rAF.
 
-   Original Work by Titash Sinha — AI Content Strategist. Please retain attribution. */
+   Original Work by Titash Sinha — B2B Content & Marketing Operations. Please retain attribution. */
 
 (function () {
   'use strict';
@@ -288,6 +288,7 @@
         '<div class="reveal in"><span class="live-badge"><span class="live-dot"></span>' + esc(P.status) + '</span></div>' +
         '<div class="reveal"><div class="hero-headline">' +
           '<p class="hero-role">' + esc(P.role) + '</p>' +
+          '<p class="hero-focus">' + esc(P.roleFocus) + '</p>' +
           '<div class="hero-name-row">' +
             '<h1 class="hero-name">' + esc(P.name.first) + '<br>' + esc(P.name.last) + '<span class="a">.</span></h1>' +
             '<img class="hero-avatar" src="assets/images/potrait-mobilescreen.png" alt="' + esc(P.name.first + ' ' + P.name.last) + '">' +
@@ -307,9 +308,13 @@
     var paras = P.summary.map(function (t) {
       return '<p class="body-lg" style="margin-bottom:24px;max-width:680px">' + esc(t) + '</p>';
     }).join('');
+    var direction = '<div class="positioning-notes">' +
+      '<p class="transition-note">' + esc(P.transition) + '</p>' +
+      '<p class="opportunity-note">' + esc(P.opportunity) + '</p>' +
+      '</div>';
     return '<section id="summary"><div class="shell"><div class="content-col">' +
       '<h2 class="section-h reveal">Summary</h2>' +
-      '<div class="reveal reveal-d1"><p class="summary-tagline">' + tagline + '</p>' + paras + '</div>' +
+      '<div class="reveal reveal-d1"><p class="summary-tagline">' + tagline + '</p>' + paras + direction + '</div>' +
       '<blockquote class="pull-quote reveal reveal-d2">' + esc(P.quote.text) + '</blockquote>' +
       '</div></div></section>';
   }
@@ -326,6 +331,9 @@
 
   function roleBlock(role) {
     var location = role.location ? '<span class="role-location">· ' + esc(role.location) + '</span>' : '';
+    var functionalScope = role.functionalScope
+      ? '<div class="role-functional">' + esc(role.functionalScope) + '</div>'
+      : '';
     var subRole = role.subRole ? '<div class="role-subrole"><span class="role-subrole-mark">↳</span>' + esc(role.subRole) + '</div>' : '';
     var projects = (role.projects && role.projects.length)
       ? '<div class="selected-label">Selected Projects</div><div class="project-grid reveal">' +
@@ -338,7 +346,7 @@
         '<h3 class="role-title">' + esc(role.title) + '</h3>' +
         '<span class="role-date">' + esc(role.date) + '</span>' +
         '<div class="role-company">' + esc(role.company) + location + '</div>' +
-        subRole +
+        functionalScope + subRole +
       '</div><p class="role-scope">' + esc(role.scope) + '</p></div>' +
       projects + resp + '</div>';
   }
@@ -346,7 +354,7 @@
   function renderCompetencies() {
     if (!P.competencies || !P.competencies.length) return '';
     var DECOS = [
-      // Systems Engineering — network nodes
+      // B2B Campaigns & Demand Generation — network nodes
       '<svg viewBox="0 0 64 48" fill="none" xmlns="http://www.w3.org/2000/svg">' +
         '<circle cx="8" cy="24" r="3.5" fill="#ffb347" fill-opacity=".5"/>' +
         '<circle cx="32" cy="8" r="3.5" fill="#ffb347" fill-opacity=".5"/>' +
@@ -358,7 +366,7 @@
         '<line x1="35" y1="38" x2="53" y2="26" stroke="#ffb347" stroke-opacity=".3" stroke-width="1.2"/>' +
         '<line x1="32" y1="12" x2="32" y2="36" stroke="#ffb347" stroke-opacity=".12" stroke-width="1" stroke-dasharray="3 3"/>' +
       '</svg>',
-      // Product Marketing & GTM — bar chart with trend line + nodes
+      // SEO, GEO & Content Strategy — bar chart with trend line + nodes
       '<svg viewBox="0 0 64 46" fill="none" xmlns="http://www.w3.org/2000/svg">' +
         '<rect x="2"  y="30" width="9" height="12" rx="1.5" fill="#ffb347" fill-opacity=".45"/>' +
         '<rect x="14" y="23" width="9" height="19" rx="1.5" fill="#ffb347" fill-opacity=".45"/>' +
@@ -373,7 +381,7 @@
         '<circle cx="54.5" cy="4"  r="2.5" fill="#221c18" stroke="#ffb347" stroke-width="1.3"/>' +
         '<line x1="0" y1="43" x2="64" y2="43" stroke="#ffb347" stroke-opacity=".15" stroke-width="1"/>' +
       '</svg>',
-      // Content Operations — layered flow bars with arrows
+      // AI Workflows & Governance — layered flow bars with arrows
       '<svg viewBox="0 0 64 48" fill="none" xmlns="http://www.w3.org/2000/svg">' +
         '<rect x="4" y="6" width="24" height="8" rx="2" fill="#ffb347" fill-opacity=".15" stroke="#ffb347" stroke-opacity=".3" stroke-width="1"/>' +
         '<rect x="4" y="20" width="38" height="8" rx="2" fill="#ffb347" fill-opacity=".15" stroke="#ffb347" stroke-opacity=".3" stroke-width="1"/>' +
@@ -381,7 +389,7 @@
         '<path d="M31 10 L38 10 M35 7.5 L38 10 L35 12.5" stroke="#ffb347" stroke-opacity=".45" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>' +
         '<path d="M45 24 L52 24 M49 21.5 L52 24 L49 26.5" stroke="#ffb347" stroke-opacity=".45" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>' +
       '</svg>',
-      // GEO & AI Strategy — concentric signal rings
+      // Content Operations & Leadership — concentric signal rings
       '<svg viewBox="0 0 64 48" fill="none" xmlns="http://www.w3.org/2000/svg">' +
         '<circle cx="32" cy="24" r="4" fill="#ffb347" fill-opacity=".6"/>' +
         '<circle cx="32" cy="24" r="11" stroke="#ffb347" stroke-opacity=".3" stroke-width="1.2"/>' +
@@ -419,9 +427,15 @@
     var skills = P.skills.map(function (s) {
       return '<div class="skill-item"><span class="skill-bullet"></span><span class="skill-text">' + esc(s) + '</span></div>';
     }).join('');
-    var tools = P.tools.map(function (t) {
-      return '<div class="tool"><div class="tool-icon"><img src="' + esc(t.logo) + '" alt="' + esc(t.name) + '" loading="lazy"></div>' +
-        '<div class="tool-name">' + esc(t.name) + '</div></div>';
+    var toolGroups = P.toolGroups.map(function (group) {
+      var tools = group.tools.map(function (tool) {
+        var logo = tool.logo
+          ? '<img src="' + esc(tool.logo) + '" alt="" loading="lazy">'
+          : '';
+        return '<div class="tool-chip">' + logo + '<span>' + esc(tool.name) + '</span></div>';
+      }).join('');
+      return '<div class="tool-group"><div class="tool-group-label">' + esc(group.name) + '</div>' +
+        '<div class="tool-chips">' + tools + '</div></div>';
     }).join('');
     var langs = P.languages.map(function (l) {
       return '<div class="lang-item"><div class="lang-row"><span class="lang-name">' + esc(l.name) + '</span>' +
@@ -435,8 +449,8 @@
     return '<section id="skills"><div class="shell"><div class="content-col">' +
       '<h2 class="section-h reveal">Skills<br>&amp; Tools</h2>' +
       '<div class="skills-grid reveal">' + skills + '</div>' +
-      '<div class="selected-label" style="margin:0 0 24px 0">Daily-driver toolkit</div>' +
-      '<div class="tools-row reveal">' + tools + '</div>' +
+      '<div class="selected-label tools-label">Toolbox by function</div>' +
+      '<div class="tool-groups reveal">' + toolGroups + '</div>' +
       '<div class="lang-edu reveal" style="margin-top:80px">' +
         '<div><div class="col-label">Languages</div>' + langs + '</div>' +
         '<div><div class="col-label">Education &amp; Certifications</div>' + edu + '</div>' +
@@ -480,7 +494,7 @@
   }
 
   function renderCVButton() {
-    return '<a class="cv-btn" href="' + esc(P.assets.resume) + '" download="Titash_Sinha_Content_Strategy_and_Operations.pdf" target="_blank" rel="noopener">' +
+    return '<a class="cv-btn" href="' + esc(P.assets.resume) + '" download="Titash_Sinha_Resume_2026.pdf" target="_blank" rel="noopener">' +
       icon('Download', 'class="icon"') + 'Download CV</a>';
   }
 
